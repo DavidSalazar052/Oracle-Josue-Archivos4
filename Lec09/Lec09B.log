@@ -1,0 +1,135 @@
+=======================================
+VISTAS Y CONSULTAS EN SISTEMA HR
+====Conectar con bases1===========
+PASO 1 (PROD CARTESIANO) REGIONES 4 X PAISES 25 = (4x25) = 100
+
+REGION_NAME            COUNTRY_NAME                                                                                                                   
+---------------------- -------------------------                                                                                                      
+Middle East and Africa Zimbabwe                                                                                                                       
+Middle East and Africa Zambia                                                                                                                         
+Americas               United States of America                                                                                                       
+Europe                 United Kingdom                                                                                                                 
+Europe                 Switzerland                                                                                                                    
+Asia                   Singapore                                                                                                                      
+Middle East and Africa Nigeria                                                                                                                        
+Europe                 Netherlands                                                                                                                    
+Americas               Mexico                                                                                                                         
+Middle East and Africa Kuwait                                                                                                                         
+Asia                   Japan                                                                                                                          
+Europe                 Italy                                                                                                                          
+Middle East and Africa Israel                                                                                                                         
+Asia                   India                                                                                                                          
+Asia                   HongKong                                                                                                                       
+Europe                 Germany                                                                                                                        
+Europe                 France                                                                                                                         
+Middle East and Africa Egypt                                                                                                                          
+Europe                 Denmark                                                                                                                        
+Asia                   China                                                                                                                          
+Americas               Canada                                                                                                                         
+Americas               Brazil                                                                                                                         
+Europe                 Belgium                                                                                                                        
+Asia                   Australia                                                                                                                      
+Americas               Argentina                                                                                                                      
+
+25 rows selected.
+
+
+View created.
+
+rep_paises_loc 1, 2
+
+View created.
+
+=======================================================
+version 2 vista rep_empleados_info
+
+View created.
+
+
+Session altered.
+
+
+    ID NOMBRE_COMPLETO                FEC_CONTRATO                                                                                                                                                      
+------ ------------------------------ --------------------                                                                                                                                              
+   184 Nandita Sarchand               27-jan-1996 00:00:00                                                                                                                                              
+   156 Janette King                   30-jan-1996 00:00:00                                                                                                                                              
+   192 Sarah Bell                     04-feb-1996 00:00:00                                                                                                                                              
+   201 Michael Hartstein              17-feb-1996 00:00:00                                                                                                                                              
+   157 Patrick Sully                  04-mar-1996 00:00:00                                                                                                                                              
+   174 Ellen Abel                     11-may-1996 00:00:00                                                                                                                                              
+   133 Jason Mallin                   14-jun-1996 00:00:00                                                                                                                                              
+   120 Matthew Weiss                  18-jul-1996 00:00:00                                                                                                                                              
+   158 Allan McEwen                   01-aug-1996 00:00:00                                                                                                                                              
+   145 John Russell                   01-oct-1996 00:00:00                                                                                                                                              
+   146 Karen Partners                 05-jan-1997 00:00:00                                                                                                                                              
+   142 Curtis Davies                  29-jan-1997 00:00:00                                                                                                                                              
+   150 Peter Tucker                   30-jan-1997 00:00:00                                                                                                                                              
+   131 James Marlow                   16-feb-1997 00:00:00                                                                                                                                              
+   185 Alexis Bull                    20-feb-1997 00:00:00                                                                                                                                              
+   193 Britney Everett                03-mar-1997 00:00:00                                                                                                                                              
+   159 Lindsey Smith                  10-mar-1997 00:00:00                                                                                                                                              
+   147 Alberto Errazuriz              10-mar-1997 00:00:00                                                                                                                                              
+   168 Lisa Ozer                      11-mar-1997 00:00:00                                                                                                                                              
+   175 Alyssa Hutton                  19-mar-1997 00:00:00                                                                                                                                              
+   151 David Bernstein                24-mar-1997 00:00:00                                                                                                                                              
+   121 Adam Fripp                     10-apr-1997 00:00:00                                                                                                                                              
+   188 Kelly Chung                    14-jun-1997 00:00:00                                                                                                                                              
+   105 David Austin                   25-jun-1997 00:00:00                                                                                                                                              
+   125 Julia Nayer                    16-jul-1997 00:00:00                                                                                                                                              
+   117 Sigal Tobias                   24-jul-1997 00:00:00                                                                                                                                              
+   189 Jennifer Dilly                 13-aug-1997 00:00:00                                                                                                                                              
+   202 Pat Fay                        17-aug-1997 00:00:00                                                                                                                                              
+   152 Peter Hall                     20-aug-1997 00:00:00                                                                                                                                              
+   129 Laura Bissot                   20-aug-1997 00:00:00                                                                                                                                              
+   110 John Chen                      28-sep-1997 00:00:00                                                                                                                                              
+   111 Ismael Sciarra                 30-sep-1997 00:00:00                                                                                                                                              
+   123 Shanta Vollman                 10-oct-1997 00:00:00                                                                                                                                              
+   138 Stephen Stiles                 26-oct-1997 00:00:00                                                                                                                                              
+   130 Mozhe Atkinson                 30-oct-1997 00:00:00                                                                                                                                              
+   162 Clara Vishney                  11-nov-1997 00:00:00                                                                                                                                              
+   160 Louise Doran                   15-dec-1997 00:00:00                                                                                                                                              
+   116 Shelli Baida                   24-dec-1997 00:00:00                                                                                                                                              
+   180 Winston Taylor                 24-jan-1998 00:00:00                                                                                                                                              
+   170 Tayler Fox                     24-jan-1998 00:00:00                                                                                                                                              
+   106 Valli Pataballa                05-feb-1998 00:00:00                                                                                                                                              
+   139 John Seo                       12-feb-1998 00:00:00                                                                                                                                              
+   181 Jean Fleaur                    23-feb-1998 00:00:00                                                                                                                                              
+   112 Jose Manuel Urman              07-mar-1998 00:00:00                                                                                                                                              
+   143 Randall Matos                  15-mar-1998 00:00:00                                                                                                                                              
+   169 Harrison Bloom                 23-mar-1998 00:00:00                                                                                                                                              
+   176 Jonathon Taylor                24-mar-1998 00:00:00                                                                                                                                              
+
+    ID NOMBRE_COMPLETO                FEC_CONTRATO                                                                                                                                                      
+------ ------------------------------ --------------------                                                                                                                                              
+   153 Christopher Olsen              30-mar-1998 00:00:00                                                                                                                                              
+   140 Joshua Patel                   06-apr-1998 00:00:00                                                                                                                                              
+   177 Jack Livingston                23-apr-1998 00:00:00                                                                                                                                              
+   196 Alana Walsh                    24-apr-1998 00:00:00                                                                                                                                              
+   197 Kevin Feeney                   23-may-1998 00:00:00                                                                                                                                              
+   186 Julia Dellinger                24-jun-1998 00:00:00                                                                                                                                              
+   194 Samuel McCain                  01-jul-1998 00:00:00                                                                                                                                              
+   144 Peter Vargas                   09-jul-1998 00:00:00                                                                                                                                              
+   190 Timothy Gates                  11-jul-1998 00:00:00                                                                                                                                              
+   134 Michael Rogers                 26-aug-1998 00:00:00                                                                                                                                              
+   126 Irene Mikkilineni              28-sep-1998 00:00:00                                                                                                                                              
+   161 Sarath Sewall                  03-nov-1998 00:00:00                                                                                                                                              
+   118 Guy Himuro                     15-nov-1998 00:00:00                                                                                                                                              
+   154 Nanette Cambrault              09-dec-1998 00:00:00                                                                                                                                              
+
+61 rows selected.
+
+FROM region r, pais c, ciudad l
+                       *
+ERROR at line 4:
+ORA-00942: table or view "BASES1"."CIUDAD" does not exist 
+Help: https://docs.oracle.com/error-help/db/ora-00942/ 
+
+
+select * from rep_reg_pais_ciudad
+              *
+ERROR at line 1:
+ORA-00942: table or view "BASES1"."REP_REG_PAIS_CIUDAD" does not exist 
+Help: https://docs.oracle.com/error-help/db/ora-00942/ 
+
+
+====fin===========

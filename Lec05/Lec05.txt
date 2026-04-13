@@ -1,0 +1,20 @@
+========================================================
+
+Lección No 05
+
+03-mar-2026
+===========
+
+========================================================
+Continuamos con ejemplo.
+
+FK Reflexivo.
+
+========================================================
+https://es.wikipedia.org/wiki/12_reglas_de_Codd
+
+========================================================
+DDL. Data Definition Language. create, alter, drop
+DML. Data Manipulation Language.  select, insert, delete, update
+DCL. Data Control Languaje.  grant, revoke
+========================================================

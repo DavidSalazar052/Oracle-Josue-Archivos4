@@ -1,0 +1,301 @@
+=======================================
+TAREA 2 DE BASES DE DATOS
+ESTUDIANTE: JOSUE DAVID SANCHEZ SALAZAR
+CEDULA : 118840506
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+====inicio===========
+CREACIÓN DE TABLA
+
+Table created.
+
+
+Table created.
+
+DESIGNACIÓN DE PK-FK-CK
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+DESIGNACIÓN DE SECUENCIAS
+
+Sequence created.
+
+
+Sequence created.
+
+
+Sequence created.
+
+INSECCIONES
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+UPDATES DE TABLA CODIGO
+update en la parte de Txt tipo 2
+             *
+ERROR at line 1:
+ORA-00971: missing SET keyword 
+Help: https://docs.oracle.com/error-help/db/ora-00971/ 
+
+
+
+1 row updated.
+
+
+1 row updated.
+
+update en la parte de Txt tipo 5
+             *
+ERROR at line 1:
+ORA-00971: missing SET keyword 
+Help: https://docs.oracle.com/error-help/db/ora-00971/ 
+
+
+
+1 row updated.
+
+
+1 row updated.
+
+
+1 row updated.
+
+
+1 row updated.
+
+
+5 rows updated.
+
+
+25 rows updated.
+
+
+Commit complete.
+
+
+        ID NOMBRE                         FEC_CREA                                                                                                    
+---------- ------------------------------ ---------                                                                                                   
+         1 Provincia                      08-MAR-26                                                                                                   
+         2 Estados para Activos           08-MAR-26                                                                                                   
+         3 Estado Civil                   08-MAR-26                                                                                                   
+         4 Equipo de Futbol               08-MAR-26                                                                                                   
+         5 Universidad                    08-MAR-26                                                                                                   
+
+5 rows selected.
+
+
+        ID    ID_TIPO DESPLIEGUE                     TIP_VALOR                      VALOR                FEC_CREA                                     
+---------- ---------- ------------------------------ ------------------------------ -------------------- ---------                                    
+      1001          1 San Jose                       Num                            1                    08-MAR-26                                    
+      1002          1 Alajuela                       Num                            2                    08-MAR-26                                    
+      1003          1 Cartago                        Num                            3                    08-MAR-26                                    
+      1004          1 Heredia                        Num                            4                    08-MAR-26                                    
+      1005          1 Guanacaste                     Num                            5                    08-MAR-26                                    
+      1006          1 Puntarenas                     Num                            6                    08-MAR-26                                    
+      1007          1 Limon                          Num                            7                    08-MAR-26                                    
+      1008          2 En uso                         Txt                            8                    08-MAR-26                                    
+      1009          2 Desechado                      Txt                            Desechado            08-MAR-26                                    
+      1010          2 Disponible                     Txt                            Disponible           08-MAR-26                                    
+      1011          3 Soltero                        Num                            11                   08-MAR-26                                    
+      1012          3 Casado                         Num                            12                   08-MAR-26                                    
+      1013          3 Viudo                          Num                            13                   08-MAR-26                                    
+      1014          3 Divorciado                     Num                            14                   08-MAR-26                                    
+      1015          3 Union de Hecho                 Num                            15                   08-MAR-26                                    
+      1016          4 CS Herediano                   Num                            16                   08-MAR-26                                    
+      1017          4 Deportivo Saprissa             Num                            17                   08-MAR-26                                    
+      1018          4 Liga Deportiva Alajuelense     Num                            18                   08-MAR-26                                    
+      1019          4 Club Sport Cartagines          Num                            19                   08-MAR-26                                    
+      1020          4 Sporting Football Club         Num                            20                   08-MAR-26                                    
+      1021          5 UCR                            Txt                            21                   08-MAR-26                                    
+      1022          5 UNA                            Txt                            UNA                  08-MAR-26                                    
+      1023          5 TEC                            Txt                            TEC                  08-MAR-26                                    
+      1024          5 UNED                           Txt                            UNED                 08-MAR-26                                    
+      1025          5 UTN                            Txt                            UTN                  08-MAR-26                                    
+
+25 rows selected.
+
+VISTAS
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+        ID    ID_TIPO DESPLIEGUE                     TIP_VALOR                      VALOR                FEC_CREA                                     
+---------- ---------- ------------------------------ ------------------------------ -------------------- ---------                                    
+      1001          1 San Jose                       Num                            1                    08-MAR-26                                    
+      1002          1 Alajuela                       Num                            2                    08-MAR-26                                    
+      1003          1 Cartago                        Num                            3                    08-MAR-26                                    
+      1004          1 Heredia                        Num                            4                    08-MAR-26                                    
+      1005          1 Guanacaste                     Num                            5                    08-MAR-26                                    
+      1006          1 Puntarenas                     Num                            6                    08-MAR-26                                    
+      1007          1 Limon                          Num                            7                    08-MAR-26                                    
+
+7 rows selected.
+
+
+        ID    ID_TIPO DESPLIEGUE                     TIP_VALOR                      VALOR                FEC_CREA                                     
+---------- ---------- ------------------------------ ------------------------------ -------------------- ---------                                    
+      1008          2 En uso                         Txt                            8                    08-MAR-26                                    
+      1009          2 Desechado                      Txt                            Desechado            08-MAR-26                                    
+      1010          2 Disponible                     Txt                            Disponible           08-MAR-26                                    
+
+3 rows selected.
+
+
+        ID    ID_TIPO DESPLIEGUE                     TIP_VALOR                      VALOR                FEC_CREA                                     
+---------- ---------- ------------------------------ ------------------------------ -------------------- ---------                                    
+      1011          3 Soltero                        Num                            11                   08-MAR-26                                    
+      1012          3 Casado                         Num                            12                   08-MAR-26                                    
+      1013          3 Viudo                          Num                            13                   08-MAR-26                                    
+      1014          3 Divorciado                     Num                            14                   08-MAR-26                                    
+      1015          3 Union de Hecho                 Num                            15                   08-MAR-26                                    
+
+5 rows selected.
+
+
+        ID    ID_TIPO DESPLIEGUE                     TIP_VALOR                      VALOR                FEC_CREA                                     
+---------- ---------- ------------------------------ ------------------------------ -------------------- ---------                                    
+      1016          4 CS Herediano                   Num                            16                   08-MAR-26                                    
+      1017          4 Deportivo Saprissa             Num                            17                   08-MAR-26                                    
+      1018          4 Liga Deportiva Alajuelense     Num                            18                   08-MAR-26                                    
+      1019          4 Club Sport Cartagines          Num                            19                   08-MAR-26                                    
+      1020          4 Sporting Football Club         Num                            20                   08-MAR-26                                    
+
+5 rows selected.
+
+
+        ID    ID_TIPO DESPLIEGUE                     TIP_VALOR                      VALOR                FEC_CREA                                     
+---------- ---------- ------------------------------ ------------------------------ -------------------- ---------                                    
+      1021          5 UCR                            Txt                            21                   08-MAR-26                                    
+      1022          5 UNA                            Txt                            UNA                  08-MAR-26                                    
+      1023          5 TEC                            Txt                            TEC                  08-MAR-26                                    
+      1024          5 UNED                           Txt                            UNED                 08-MAR-26                                    
+      1025          5 UTN                            Txt                            UTN                  08-MAR-26                                    
+
+5 rows selected.
+
+=======================================
+TAREA 2 DE BASES DE DATOS
+ESTUDIANTE: JOSUE DAVID SANCHEZ SALAZAR
+CEDULA : 118840506
+====fin===========

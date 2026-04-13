@@ -1,0 +1,61 @@
+=======================================
+Ejemplo de FK reflexivo sobre la misma tabla.
+
+      CANT                                                                      
+----------                                                                      
+         1                                                                      
+
+1 row selected.
+
+
+User dropped.
+
+
+      CANT                                                                      
+----------                                                                      
+         0                                                                      
+
+1 row selected.
+
+
+User created.
+
+
+Grant succeeded.
+
+====inicio===========
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+        ID NOMBRE        ID_JEFE                                                
+---------- ---------- ----------                                                
+         1 Juan                                                                 
+         2 Ana                 1                                                
+         3 Sonia               1                                                
+         4 Pedro               3                                                
+
+4 rows selected.
+
+====fin===========

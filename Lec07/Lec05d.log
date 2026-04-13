@@ -1,0 +1,94 @@
+=======================================
+Ejemplo de FK reflexivo sobre la misma tabla.
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+====inicio===========
+
+Table created.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+actualizar fecha
+
+5 rows updated.
+
+select * from rep_herramienta
+              *
+ERROR at line 1:
+ORA-00942: table or view "BASES1"."REP_HERRAMIENTA" does not exist 
+Help: https://docs.oracle.com/error-help/db/ora-00942/ 
+
+
+====inicio===========
+====fin===========

@@ -1,0 +1,61 @@
+========================================
+Creamos dos usuarios, CONTA Y PLANILLA
+drop user conta CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'CONTA' does not exist 
+Help: https://docs.oracle.com/error-help/db/ora-01918/ 
+
+
+drop user planilla CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'PLANILLA' does not exist 
+Help: https://docs.oracle.com/error-help/db/ora-01918/ 
+
+
+
+User created.
+
+
+User created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Table created.
+
+drop table prueba1
+           *
+ERROR at line 1:
+ORA-00942: table or view "SYSTEM"."PRUEBA1" does not exist 
+Help: https://docs.oracle.com/error-help/db/ora-00942/ 
+
+
+
+Table created.
+
+========================================
+Creamos la P.K de la tabla system.prueba1
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+        ID NOMBRE        SALARIO                                                
+---------- ---------- ----------                                                
+         1 Juan             1000                                                
+         2 Ana              1200                                                
+
+2 rows selected.
+
+USER is "SYSTEM"

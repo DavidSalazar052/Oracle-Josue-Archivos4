@@ -1,0 +1,29 @@
+
+========================================================
+
+Lección No 03
+
+24-feb-2026
+===========
+
+========================================================
+--repaso
+docker exec -it 74471610f8700a262bdb54b53ffa93f84f20a5e52802e89525e7ca532beef712 bash
+
+sqlplus system/root@localhost:1521/FREEPDB1
+sqlplus conta/conta123@localhost:1521/FREEPDB1
+
+========================================================
+EN ESTA VERSION DE ORACLE: /// October 2025
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.0.0.0 - Develop, Learn, and Run for Free
+Version 23.26.0.0.0
+
+========================================================
+--En el video estaba en Oracle 11g Express Edition 11.2.02 //  September 2009
+
+--les paso todo el material para ir adelantadndo, pero sería esta y la otra semana completas!
+========================================================
+========================================================
+========================================================

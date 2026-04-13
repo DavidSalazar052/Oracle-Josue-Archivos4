@@ -1,0 +1,181 @@
+SET FEEDBACK ON
+SET PAGESIZE 150
+SET LINESIZE 400
+SPOOL &1..log
+
+PROMPT =======================================
+
+DROP USER bases1 CASCADE;
+CREATE USER bases1 IDENTIFIED BY bases123;
+GRANT DBA TO bases1;
+
+PROMPT ====inicio===========
+
+conn bases1/bases123@FREEPDB1
+
+-- CREACION DE TABLAS
+
+CREATE TABLE USUARIOS (
+    id_usuario INT,
+    correo VARCHAR2(30),
+    password VARCHAR2(30),
+    rol VARCHAR2(20)
+);
+
+CREATE TABLE ADMINISTRADORES (
+    id_admin INT,
+    id_usuario INT,
+    identificacion VARCHAR2(20),
+    nombre VARCHAR2(30)
+);
+
+CREATE TABLE EMPRESAS (
+    id_empresa INT,
+    id_usuario INT,
+    nombre VARCHAR2(30),
+    localizacion VARCHAR2(30),
+    telefono VARCHAR2(20),
+    descripcion VARCHAR2(50),
+    estado_aprobacion VARCHAR2(20)
+);
+
+CREATE TABLE OFERENTES (
+    id_oferente INT,
+    id_usuario INT,
+    identificacion VARCHAR2(20),
+    nombre VARCHAR2(50),
+    apellido VARCHAR2(50),
+    pais VARCHAR2(50),
+    telefono VARCHAR2(20),
+    residencia VARCHAR2(50),
+    cv_pdf VARCHAR2(50),
+    estado_aprobacion VARCHAR2(20)
+);
+
+-- PRIMARY KEYS
+
+ALTER TABLE USUARIOS 
+ADD CONSTRAINT PK_USUARIOS
+PRIMARY KEY (id_usuario);
+
+ALTER TABLE ADMINISTRADORES 
+ADD CONSTRAINT PK_ADMIN
+PRIMARY KEY (id_admin);
+
+ALTER TABLE EMPRESAS 
+ADD CONSTRAINT PK_EMPRESA
+PRIMARY KEY (id_empresa);
+
+ALTER TABLE OFERENTES 
+ADD CONSTRAINT PK_OFERENTE
+PRIMARY KEY (id_oferente);
+
+-- FOREIGN KEYS
+
+ALTER TABLE ADMINISTRADORES 
+ADD CONSTRAINT FK_ADMIN_USUARIO
+FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id_usuario);
+
+ALTER TABLE EMPRESAS 
+ADD CONSTRAINT FK_EMPRESA_USUARIO
+FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id_usuario);
+
+ALTER TABLE OFERENTES 
+ADD CONSTRAINT FK_OFERENTE_USUARIO
+FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id_usuario);
+
+-- CHECK CONSTRAINTS
+
+ALTER TABLE USUARIOS 
+ADD CONSTRAINT CK_ROL
+CHECK (rol IN ('ADMIN','EMPRESA','OFERENTE'));
+
+ALTER TABLE EMPRESAS 
+ADD CONSTRAINT CK_EMPRESA_ESTADO
+CHECK (estado_aprobacion IN ('PENDIENTE','APROBADO','RECHAZADO'));
+
+ALTER TABLE OFERENTES 
+ADD CONSTRAINT CK_OFERENTE_ESTADO
+CHECK (estado_aprobacion IN ('PENDIENTE','APROBADO','RECHAZADO'));
+
+-- INSERTS
+
+INSERT INTO USUARIOS VALUES (1,'admin@bolsa.com','1234','ADMIN');
+INSERT INTO USUARIOS VALUES (2,'microsoft@gmail.com','1234','EMPRESA');
+INSERT INTO USUARIOS VALUES (3,'intel@gmail.com','1234','EMPRESA');
+INSERT INTO USUARIOS VALUES (4,'josue@gmail.com','1234','OFERENTE');
+INSERT INTO USUARIOS VALUES (5,'alex@gmail.com','1234','OFERENTE');
+
+INSERT INTO ADMINISTRADORES 
+VALUES (1,1,'10101010','Administrador Principal');
+
+INSERT INTO EMPRESAS 
+VALUES (1,2,'MICROSOFT','USA','1234','Empresa de software','APROBADO');
+
+INSERT INTO EMPRESAS 
+VALUES (2,3,'INTEL','USA','2344','Empresa de hardware','APROBADO');
+
+INSERT INTO OFERENTES 
+VALUES (1,4,'11111111','Josue','Sanchez','CR','1111','CR','cv_josue.pdf','APROBADO');
+
+INSERT INTO OFERENTES 
+VALUES (2,5,'22222222','Alex','Quesada','CR','2222','CR','cv_alex.pdf','PENDIENTE');
+
+-- CONSULTAS
+PROMPT ==== FORMATO DE COLUMNAS ====
+
+COLUMN correo FORMAT A25
+COLUMN rol FORMAT A10
+COLUMN nombre FORMAT A15
+COLUMN apellido FORMAT A15
+COLUMN localizacion FORMAT A10
+COLUMN descripcion FORMAT A25
+COLUMN estado_aprobacion FORMAT A10
+COLUMN pais FORMAT A5
+COLUMN residencia FORMAT A10
+COLUMN telefono FORMAT A10
+
+
+SELECT * FROM USUARIOS;
+SELECT * FROM EMPRESAS;
+SELECT * FROM OFERENTES;
+
+-- VIEWS
+
+CREATE VIEW VISTA_USUARIOS_GENERALES AS
+SELECT 
+    U.id_usuario,
+    U.correo,
+    U.rol
+FROM USUARIOS U;
+
+CREATE VIEW VISTA_EMPRESAS AS
+SELECT
+    E.id_empresa,
+    E.nombre,
+    U.correo,
+    E.localizacion,
+    E.telefono,
+    E.estado_aprobacion
+FROM EMPRESAS E
+JOIN USUARIOS U
+ON E.id_usuario = U.id_usuario;
+
+SELECT * FROM VISTA_EMPRESAS;
+
+CREATE VIEW VISTA_OFERENTES AS
+SELECT
+    O.id_oferente,
+    O.nombre,
+    O.apellido,
+    U.correo,
+    O.pais,
+    O.telefono,
+    O.estado_aprobacion
+FROM OFERENTES O
+JOIN USUARIOS U
+ON O.id_usuario = U.id_usuario;
+
+PROMPT ====fin===========
+SPOOL OFF
+EXIT

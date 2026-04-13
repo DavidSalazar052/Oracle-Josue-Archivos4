@@ -1,0 +1,992 @@
+=======================================
+TABLAS DE SISTEMA HR
+drop user bases1 cascade
+*
+ERROR at line 1:
+ORA-01940: cannot drop a user who is currently connected
+Help: https://docs.oracle.com/error-help/db/ora-01940/
+
+
+create user bases1 identified by bases123
+            *
+ERROR at line 1:
+ORA-01920: user name 'BASES1' conflicts with another user or role name
+Help: https://docs.oracle.com/error-help/db/ora-01920/
+
+
+
+Grant succeeded.
+
+====Conectar con bases1===========
+====================================================================
+Create the REGIONS table to hold region information for locations
+LOCATIONS table has a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+====================================================================
+Create the COUNTRIES table to hold country information for customers
+and company locations.
+OE.CUSTOMERS table and  LOCATIONS have a foreign key to this table.
+
+Table created.
+
+
+Table altered.
+
+====================================================================
+Create the LOCATIONS table to hold address information for company departments.
+DEPARTMENTS has a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+Useful for any subsequent addition of rows to locations table
+Starts with 3300
+
+Sequence created.
+
+====================================================================
+Create the DEPARTMENTS table to hold company department information.
+EMPLOYEES and  JOB_HISTORY have a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+Useful for any subsequent addition of rows to departments table
+Starts with 280
+
+Sequence created.
+
+====================================================================
+Create the JOBS table to hold the different names of job roles within the company.
+EMPLOYEES has a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+====================================================================
+Create the EMPLOYEES table to hold the employee personnel
+information for the company.
+EMPLOYEES has a self referencing foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table altered.
+
+Useful for any subsequent addition of rows to employees table
+Starts with 207
+
+Sequence created.
+
+====================================================================
+Create the JOB_HISTORY table to hold the history of jobs that
+employees have held in the past.
+JOBS, HR_DEPARTMENTS, and  EMPLOYEES have a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+====================================================================
+Create the EMP_DETAILS_VIEW that joins the employees, jobs,
+departments, jobs, countries, and locations table to provide details
+about employees.
+
+View created.
+
+
+Commit complete.
+
+
+Session altered.
+
+===========================insert data into the REGIONS table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the COUNTRIES table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the LOCATIONS table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================*insert data into the DEPARTMENTS table
+disable integrity constraint to EMPLOYEES to load data
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the JOBS table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the EMPLOYEES table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+========= insert data into the JOB_HISTORY table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+enable integrity constraint to DEPARTMENTS
+
+Table altered.
+
+
+Commit complete.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Commit complete.
+
+procedure and statement trigger to allow dmls during business hours:
+
+Procedure created.
+
+
+Trigger created.
+
+
+Trigger altered.
+
+==========================================================================
+procedure to add a row to the JOB_HISTORY table and row trigger
+to call the procedure when data is updated in the job_id or
+department_id columns in the EMPLOYEES table:
+
+Procedure created.
+
+
+Trigger created.
+
+
+Commit complete.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Commit complete.
+
+====fin===========

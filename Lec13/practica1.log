@@ -1,0 +1,290 @@
+=======================================
+TABLAS DE SISTEMA HR
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Table created.
+
+
+Table altered.
+
+
+Sequence created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Function created.
+
+
+Function created.
+
+
+Function created.
+
+
+Function created.
+
+
+Function created.
+
+
+Function created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+FUN_CANT_MASC_EMP(100)
+----------------------
+                     2
+
+1 row selected.
+
+
+FUN_PESO_MASC_EMP(100)
+----------------------
+                    15
+
+1 row selected.
+
+
+FUN_PESO_MASC_TIPO('PERRO')
+---------------------------
+                         18
+
+1 row selected.
+
+
+FUN_SALARIO_ANUAL(5000)
+-----------------------
+                  60000
+
+1 row selected.
+
+
+FUN_PROM_PESO_MASC_EMP(100)
+---------------------------
+                        7.5
+
+1 row selected.
+
+
+        ID NOM_COMPLETO                                    CANT_MASC
+---------- ---------------------------------------------- ----------
+       100 Steven King                                             2
+       101 Neena Kochhar                                           1
+       102 Lex De Haan                                             2
+
+3 rows selected.
+
+
+        ID NOM_COMPLETO                                    PESO_MASC
+---------- ---------------------------------------------- ----------
+       102 Lex De Haan                                             9
+       100 Steven King                                            15
+       101 Neena Kochhar                                           8
+
+3 rows selected.
+
+
+TIPO       PESO_TOTAL
+---------- ----------
+perro              18
+gato               11
+conejo              3
+
+3 rows selected.
+
+
+NOM_COMPLETO                                   NOM_MASCOTA          PESO_MASCOTA
+---------------------------------------------- -------------------- ------------
+Steven King                                    Firulais                       10
+Steven King                                    Michi                           5
+Neena Kochhar                                  Rex                             8
+Lex De Haan                                    Cone                            3
+Lex De Haan                                    Bigotes                         6
+
+5 rows selected.
+
+
+        ID NOM_COMPLETO_EJEMPLO1                          PROMP_PESO
+---------- ---------------------------------------------- ----------
+       174 Ellen Abel                                              0
+       166 Sundar Ande                                             0
+       130 Mozhe Atkinson                                          0
+       105 David Austin                                            0
+       204 Hermann Baer                                            0
+       116 Shelli Baida                                            0
+       167 Amit Banda                                              0
+       172 Elizabeth Bates                                         0
+       192 Sarah Bell                                              0
+       151 David Bernstein                                         0
+       129 Laura Bissot                                            0
+       169 Harrison Bloom                                          0
+       185 Alexis Bull                                             0
+       187 Anthony Cabrio                                          0
+       148 Gerald Cambrault                                        0
+       154 Nanette Cambrault                                       0
+       110 John Chen                                               0
+       188 Kelly Chung                                             0
+       119 Karen Colmenares                                        0
+       142 Curtis Davies                                           0
+       102 Lex De Haan                                           4.5
+       186 Julia Dellinger                                         0
+       189 Jennifer Dilly                                          0
+       160 Louise Doran                                            0
+       104 Bruce Ernst                                             0
+       147 Alberto Errazuriz                                       0
+       193 Britney Everett                                         0
+       109 Daniel Faviet                                           0
+       202 Pat Fay                                                 0
+       197 Kevin Feeney                                            0
+       181 Jean Fleaur                                             0
+       170 Tayler Fox                                              0
+       121 Adam Fripp                                              0
+       190 Timothy Gates                                           0
+       135 Ki Gee                                                  0
+       183 Girard Geoni                                            0
+       206 William Gietz                                           0
+       199 Douglas Grant                                           0
+       178 Kimberely Grant                                         0
+       108 Nancy Greenberg                                         0
+       163 Danielle Greene                                         0
+       152 Peter Hall                                              0
+       201 Michael Hartstein                                       0
+       205 Shelley Higgins                                         0
+       118 Guy Himuro                                              0
+       103 Alexander Hunold                                        0
+       175 Alyssa Hutton                                           0
+
+        ID NOM_COMPLETO_EJEMPLO1                          PROMP_PESO
+---------- ---------------------------------------------- ----------
+       179 Charles Johnson                                         0
+       195 Vance Jones                                             0
+       122 Payam Kaufling                                          0
+       115 Alexander Khoo                                          0
+       156 Janette King                                            0
+       100 Steven King                                           7.5
+       101 Neena Kochhar                                           8
+       173 Sundita Kumar                                           0
+       137 Renske Ladwig                                           0
+       127 James Landry                                            0
+       165 David Lee                                               0
+       177 Jack Livingston                                         0
+       107 Diana Lorentz                                           0
+       133 Jason Mallin                                            0
+       128 Steven Markle                                           0
+       131 James Marlow                                            0
+       164 Mattea Marvins                                          0
+       143 Randall Matos                                           0
+       203 Susan Mavris                                            0
+       194 Samuel McCain                                           0
+       158 Allan McEwen                                            0
+       126 Irene Mikkilineni                                       0
+       124 Kevin Mourgos                                           0
+       125 Julia Nayer                                             0
+       198 Donald OConnell                                         0
+       153 Christopher Olsen                                       0
+       132 TJ Olson                                                0
+       168 Lisa Ozer                                               0
+       146 Karen Partners                                          0
+       106 Valli Pataballa                                         0
+       140 Joshua Patel                                            0
+       191 Randall Perkins                                         0
+       136 Hazel Philtanker                                        0
+       113 Luis Popp                                               0
+       141 Trenna Rajs                                             0
+       114 Den Raphaely                                            0
+       134 Michael Rogers                                          0
+       145 John Russell                                            0
+       184 Nandita Sarchand                                        0
+       111 Ismael Sciarra                                          0
+       139 John Seo                                                0
+       161 Sarath Sewall                                           0
+       159 Lindsey Smith                                           0
+       171 William Smith                                           0
+       138 Stephen Stiles                                          0
+       182 Martha Sullivan                                         0
+       157 Patrick Sully                                           0
+
+        ID NOM_COMPLETO_EJEMPLO1                          PROMP_PESO
+---------- ---------------------------------------------- ----------
+       176 Jonathon Taylor                                         0
+       180 Winston Taylor                                          0
+       117 Sigal Tobias                                            0
+       150 Peter Tucker                                            0
+       155 Oliver Tuvault                                          0
+       112 Jose Manuel Urman                                       0
+       144 Peter Vargas                                            0
+       162 Clara Vishney                                           0
+       123 Shanta Vollman                                          0
+       196 Alana Walsh                                             0
+       120 Matthew Weiss                                           0
+       200 Jennifer Whalen                                         0
+       149 Eleni Zlotkey                                           0
+
+107 rows selected.
+

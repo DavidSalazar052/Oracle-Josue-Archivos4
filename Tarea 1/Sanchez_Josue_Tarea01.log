@@ -1,0 +1,59 @@
+==============================================
+Tarea 01 - Josue David Sanchez - 118840506
+
+SYSDATE                                                                         
+---------                                                                       
+20-FEB-26                                                                       
+
+1 row selected.
+
+
+Table dropped.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+        ID NOMBRE             SALARIO                                           
+---------- --------------- ----------                                           
+         1 Manuel                3000                                           
+         2 Ana                   3000                                           
+
+2 rows selected.
+
+
+1 row updated.
+
+
+1 row updated.
+
+
+Commit complete.
+
+
+        ID NOMBRE             SALARIO                                           
+---------- --------------- ----------                                           
+         1 Josue S.S             4000                                           
+         2 Ana                   3000                                           
+
+2 rows selected.
+
+
+1 row deleted.
+
+
+Commit complete.
+
+
+        ID NOMBRE             SALARIO                                           
+---------- --------------- ----------                                           
+         1 Josue S.S             4000                                           
+
+1 row selected.
+

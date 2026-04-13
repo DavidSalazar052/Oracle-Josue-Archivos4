@@ -1,0 +1,129 @@
+=======================================
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+====inicio===========
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+==== FORMATO DE COLUMNAS ====
+
+ID_USUARIO CORREO                    PASSWORD                       ROL                                                                                                                                                                                                                                                                                                                                         
+---------- ------------------------- ------------------------------ ----------                                                                                                                                                                                                                                                                                                                                  
+         1 admin@bolsa.com           1234                           ADMIN                                                                                                                                                                                                                                                                                                                                       
+         2 microsoft@gmail.com       1234                           EMPRESA                                                                                                                                                                                                                                                                                                                                     
+         3 intel@gmail.com           1234                           EMPRESA                                                                                                                                                                                                                                                                                                                                     
+         4 josue@gmail.com           1234                           OFERENTE                                                                                                                                                                                                                                                                                                                                    
+         5 alex@gmail.com            1234                           OFERENTE                                                                                                                                                                                                                                                                                                                                    
+
+5 rows selected.
+
+
+ID_EMPRESA ID_USUARIO NOMBRE          LOCALIZACI TELEFONO   DESCRIPCION               ESTADO_APR                                                                                                                                                                                                                                                                                                                
+---------- ---------- --------------- ---------- ---------- ------------------------- ----------                                                                                                                                                                                                                                                                                                                
+         1          2 MICROSOFT       USA        1234       Empresa de software       APROBADO                                                                                                                                                                                                                                                                                                                  
+         2          3 INTEL           USA        2344       Empresa de hardware       APROBADO                                                                                                                                                                                                                                                                                                                  
+
+2 rows selected.
+
+
+ID_OFERENTE ID_USUARIO IDENTIFICACION       NOMBRE          APELLIDO        PAIS  TELEFONO   RESIDENCIA CV_PDF                                             ESTADO_APR                                                                                                                                                                                                                                           
+----------- ---------- -------------------- --------------- --------------- ----- ---------- ---------- -------------------------------------------------- ----------                                                                                                                                                                                                                                           
+          1          4 11111111             Josue           Sanchez         CR    1111       CR         cv_josue.pdf                                       APROBADO                                                                                                                                                                                                                                             
+          2          5 22222222             Alex            Quesada         CR    2222       CR         cv_alex.pdf                                        PENDIENTE                                                                                                                                                                                                                                            
+
+2 rows selected.
+
+
+View created.
+
+
+View created.
+
+
+ID_EMPRESA NOMBRE          CORREO                    LOCALIZACI TELEFONO   ESTADO_APR                                                                                                                                                                                                                                                                                                                           
+---------- --------------- ------------------------- ---------- ---------- ----------                                                                                                                                                                                                                                                                                                                           
+         1 MICROSOFT       microsoft@gmail.com       USA        1234       APROBADO                                                                                                                                                                                                                                                                                                                             
+         2 INTEL           intel@gmail.com           USA        2344       APROBADO                                                                                                                                                                                                                                                                                                                             
+
+2 rows selected.
+
+
+View created.
+
+====fin===========

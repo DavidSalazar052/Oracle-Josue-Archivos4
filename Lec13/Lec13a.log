@@ -1,0 +1,214 @@
+=======================================
+TABLAS DE SISTEMA HR
+====Conectar con bases1===========
+===================================================
+Dropear objetos
+
+Table dropped.
+
+
+Sequence dropped.
+
+===================================================
+Crear tabla mascotas
+
+Table created.
+
+===================================================
+Crear una secuencia
+
+Sequence created.
+
+===================================================
+Creamos la PK con el campo id.
+
+Table altered.
+
+===================================================
+Creamos la FK con empleados (employees)
+
+Table altered.
+
+===================================================
+Creamos procedimiento prc_ins_mascotas v3
+
+Procedure created.
+
+No errors.
+===================================================
+Consumimos el procedimiento v1
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+        ID NOMBRE           PESO TIPO        ID_EMP                                                                                                   
+---------- ---------- ---------- ------- ----------                                                                                                   
+      1000 Puppy               3 perro          102                                                                                                   
+      1001 Misingo             4 gato           102                                                                                                   
+      1002 Rambo               4 conejo         103                                                                                                   
+      1003 Rambo 1             5 conejo         103                                                                                                   
+      1004 Rambo 2             6 conejo         103                                                                                                   
+
+5 rows selected.
+
+===================================================
+Funcion fun_cant_masc_emp
+
+Function created.
+
+No errors.
+===================================================
+Crear o corregir función fun_peso_masc_emp antes de la vista
+
+Function created.
+
+No errors.
+===================================================
+Crear función fun_peso_masc_tipo para sumar peso por tipo de mascota
+
+Function created.
+
+No errors.
+===================================================
+Vista rep_empleado_mascotas
+
+View created.
+
+===================================================
+Vista rep_emp_mas_peso
+
+View created.
+
+
+        ID NOM_COMPLETO                                    PESO_MASC                                                                                  
+---------- ---------------------------------------------- ----------                                                                                  
+       102 Lex De Haan                                             7                                                                                  
+       103 Alexander Hunold                                       15                                                                                  
+
+2 rows selected.
+
+===================================================
+Ver suma de pesos de perros
+
+PESO_TOTAL_PERROS                                                                                                                                     
+-----------------                                                                                                                                     
+                3                                                                                                                                     
+
+1 row selected.
+
+===================================================
+Vista rep_tipo_peso_mascota
+
+View created.
+
+
+TIPO    PESO_TOTAL                                                                                                                                    
+------- ----------                                                                                                                                    
+perro            3                                                                                                                                    
+
+1 row selected.
+
+===================================================
+Actualizar peso de mascota con procedimiento
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Commit complete.
+
+===================================================
+Ver mascotas después de actualizar
+
+        ID NOMBRE           PESO TIPO        ID_EMP                                                                                                   
+---------- ---------- ---------- ------- ----------                                                                                                   
+      1000 Puppy              10 perro          102                                                                                                   
+      1001 Misingo             4 gato           102                                                                                                   
+      1002 Rambo               4 conejo         103                                                                                                   
+      1003 Rambo 1             5 conejo         103                                                                                                   
+      1004 Rambo 2             6 conejo         103                                                                                                   
+
+5 rows selected.
+
+
+        ID NOM_COMPLETO                                    PESO_MASC                                                                                  
+---------- ---------------------------------------------- ----------                                                                                  
+       102 Lex De Haan                                            14                                                                                  
+       103 Alexander Hunold                                       15                                                                                  
+
+2 rows selected.
+
+===================================================
+select rep_empleado_mascotas v2
+
+        ID NOM_COMPLETO          CANT_MASC                                                                                                            
+---------- -------------------- ----------                                                                                                            
+       100 Steven King                   0                                                                                                            
+       101 Neena Kochhar                 0                                                                                                            
+       102 Lex De Haan                   2                                                                                                            
+       103 Alexander Hunold              3                                                                                                            
+       104 Bruce Ernst                   0                                                                                                            
+
+5 rows selected.
+
+===================================================
+vista rep_emp_mascota
+
+View created.
+
+
+NOM_COMPLETO         NOM_MASCOT PESO_MASCOTA                                                                                                          
+-------------------- ---------- ------------                                                                                                          
+Alexander Hunold     Rambo                 4                                                                                                          
+Alexander Hunold     Rambo 1               5                                                                                                          
+Alexander Hunold     Rambo 2               6                                                                                                          
+Lex De Haan          Misingo               4                                                                                                          
+Lex De Haan          Puppy                10                                                                                                          
+
+5 rows selected.
+
+===================================================
+funcion fun_cant_mascotas
+
+Function created.
+
+No errors.
+
+      DATO                                                                                                                                            
+----------                                                                                                                                            
+         5                                                                                                                                            
+
+1 row selected.
+
+===================================================
+fin

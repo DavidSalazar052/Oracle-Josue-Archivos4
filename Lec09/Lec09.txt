@@ -1,0 +1,39 @@
+========================================================
+Lección No 09
+
+17-mar-2026
+=========== 
+
+========================================================
+REPASO LECCION 08
+=================
+
+Práctica No 1, Viernes 20 Marzo. 
+  Grupo de 1pm: 12:50pm a 2:50pm  (estar 10 min antes)
+  Grupo de 3pm: 3pm a 5pm
+  
++ Podría ser solo crear tablas, PK + FK
++ Podría ser solo hacer selects con inner join
++ Podría ser solo crear vistas (a partir de unas tablas ya dadas con datos)
++ Podría ser una tabla con varios isnert, delete, update, select.
+
++ RECORDAR // in (1,2,3) // in ('A','B','C','D') //  ORDER BY ASC col; // ORDER BY DESC col; // nombre de columna!
++ RECORDAR OPERADOR AND para "varias condiciones".
++ upper + lower 
++ sysdate
++ Puedo pedir un UK (email) por ejemplo.
+
+Forro. Repito. TODO LO QUE QUIERAN PONER, MANUAL O IMPRESO O A MAQUINA DE ESCRIBIR!!!, COMO GUSTEN.
+Pero que sea solo UNA CARA (una página) de tamaño máximo CARTA (8.5x11) pulgadas
+QUE TENGA EL NOMBRE COMPLETO DE USTEDES, solo una página por estudiante (el otro lado TOTALMENTE EN BLANCO!)
+
+No se permitirá el uso de celular, ni de relojes (inteligentes o normales) pues no tengo forma de distinguir.
+Yo estaré dando la hora cada 10 minutos. para su control.
+========================================================
+Solución de Tarea Moral.
+========================================================
+
+Lec09-hr + Modelo Relacional
+
+HR= Human Resources, sistema "de ejemplo" que hemos venido trabajando.
+========================================================

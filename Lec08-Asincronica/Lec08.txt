@@ -1,0 +1,71 @@
+========================================================
+Lección No 08
+
+13-mar-2026
+=========== 
+
+Asincrónica por DTU.
+
+--VIDEO
+https://www.youtube.com/watch?v=4Wsx9MdR0yA
+
+========================================================
++ Repaso de los temas
++ Caso. TAREA MORAl.. pasen.. scrip.. WA..** Forro.. 1 página 8.5 x 11 (una cara= nombre.
+  parejas. cada uno forro..
+========================================================
+No hace falta (Practica) Separadores de seccion
+PROMPT ======== fk
+..}.
+PROMPT ======== ck
+========================================================
+Orden
+1 TABLAS (Tablespace NO)
+2 Pks
+3 Fks
+4 Cks
+5 Uks ***sintaxis..
+6 Sec - Seq
+7 Inserts, Update, Delete
+8 create or replace view rep_provincias ***
+--- Nomenclatura, en min...
+--- sin eñes, ni tiles  _
+--- buena letra...
+
+nombre tablas:  empleados, activos, categorias, departamentos...
+PK empleados_pk  o pk_empleados   PK 
+FK empleados_fk1  fk1_empleados  **"emp_fk_depto" /// NO empleados1, emp ***  FK
+CK  emp_ck1  ;  emp_ck_salario : emp_ck_estado // 30 letras..  CK
+UQ - **UK  unique UQ - UK Unique Key...  emp_uk_email*** : emp_uq_email
+
+sec_empleados
+seq_emp 
+
+seq_emp.nextval -***
+
+sysdate = fecha y hora actual.
+(1,'Juan', sysdate)
+
+varchar2(20)
+number
+date
+
+Vistas:
+rep_emp_jefes
+rep_provincias
+========================================================
+upper
+lower
+========================================================
+Vistas reflexiuvas
+
+select e.nombre nom_emp, j.nombre nom_jefe
+from   empleados e, empleados j
+where  e.id_jefe = j.id;
+
+create or replace view rep_emp_jefe as
+select lower(e.nombre) nom_empleado, upper(j.nombre) nom_jefe
+from   empleados e, empleados j
+where  e.id_jefe = j.id;
+select * from rep_emp_jefe;
+========================================================

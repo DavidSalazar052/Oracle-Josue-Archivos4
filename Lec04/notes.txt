@@ -1,0 +1,15 @@
+Lec04a 
+Consultar Tablas
+
+        ID NOMBRE       ID_DEPTO    SALARIO
+---------- ---------- ---------- ----------
+         1 Ana                 2       1500
+         2 Juan                1       1400
+         3 Lucia               2       1800
+         
+
+        ID NOMBRE
+---------- ----------
+         1 Ventas
+         2 Compras
+         3 Mercadeo

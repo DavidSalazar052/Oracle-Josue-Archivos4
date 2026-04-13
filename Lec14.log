@@ -1,0 +1,136 @@
+============================================
+1. Cursor básico + OPEN / FETCH / CLOSE (un registro)
+Ejemplo: traer UN empleado específico
+============================================
+Cursor 1: OPEN / FETCH / CLOSE (1 registro)
+...
+...
+Empleado: 100 - Steven - Salario: 24000
+
+PL/SQL procedure successfully completed.
+
+============================================
+2. Cursor con LOOP manual (varios registros)
+Ejemplo: recorrer empleados de un departamento
+============================================
+Cursor 2: LOOP manual
+...
+...
+103 - Alexander - 9900
+104 - Bruce - 6600
+105 - David - 5280
+106 - Valli - 5280
+107 - Diana - 4620
+
+PL/SQL procedure successfully completed.
+
+============================================
+3. Cursor FOR LOOP (el más usado ** )
+Oracle maneja OPEN/FETCH/CLOSE automáticamente
+============================================
+Cursor 3: FOR LOOP (recomendado)
+...
+...
+100 - Steven - 24000
+101 - Neena - 17000
+102 - Lex - 17000
+108 - Nancy - 12000
+114 - Den - 11000
+145 - John - 14000
+146 - Karen - 13500
+147 - Alberto - 12000
+148 - Gerald - 11000
+149 - Eleni - 10500
+162 - Clara - 10500
+168 - Lisa - 11500
+174 - Ellen - 11000
+201 - Michael - 13000
+205 - Shelley - 12000
+
+PL/SQL procedure successfully completed.
+
+============================================
+4. Cursor con parámetros
+Ojo que p_algo pero en minuscula para diferenciar
+============================================
+Cursor 4: con parámetros
+...
+...
+145 - John
+146 - Karen
+147 - Alberto
+148 - Gerald
+149 - Eleni
+150 - Peter
+151 - David
+152 - Peter
+153 - Christopher
+154 - Nanette
+155 - Oliver
+156 - Janette
+157 - Patrick
+158 - Allan
+159 - Lindsey
+160 - Louise
+161 - Sarath
+162 - Clara
+163 - Danielle
+164 - Mattea
+165 - David
+166 - Sundar
+167 - Amit
+168 - Lisa
+169 - Harrison
+170 - Tayler
+171 - William
+172 - Elizabeth
+173 - Sundita
+174 - Ellen
+175 - Alyssa
+176 - Jonathon
+177 - Jack
+179 - Charles
+
+PL/SQL procedure successfully completed.
+
+============================================
+5. Cursor + UPDATE (atentos con los detalles)
+Subir salario 10% a depto IT
+============================================
+Cursor 5: UPDATE con cursor
+...
+...
+Listo se actualizaron esta cantidad de registros = 5
+
+PL/SQL procedure successfully completed.
+
+============================================
+6. Cursor usando tabla mascotas
+Visto en La Lec13
+============================================
+Cursor 6: JOIN empleados + mascotas
+...
+...
+Lex - Mascota: Puppy (3kg)
+Lex - Mascota: Misingo (4kg)
+Alexander - Mascota: Rambo (4kg)
+Alexander - Mascota: Rambo 1 (5kg)
+Alexander - Mascota: Rambo 2 (6kg)
+
+PL/SQL procedure successfully completed.
+
+============================================
+7. Cursor con COUNT y lógica
+============================================
+Cursor 7: lógica con conteo
+...
+...
+Lex tiene 2 mascotas
+Alexander tiene 3 mascotas
+
+PL/SQL procedure successfully completed.
+
+============================================
+“Un cursor es como un puntero que recorre un SELECT fila por fila en memoria”
+============================================
+====fin===========

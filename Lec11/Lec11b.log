@@ -1,0 +1,673 @@
+=======================================
+Conjuntos
+====Conectar con bases1===========
+======Union #1
+
+DEPARTMENT_ID FIRST_NAME
+------------- ------------------------------
+           90 Steven
+           90 Neena
+           90 Lex
+           60 Alexander
+           60 Bruce
+           60 David
+           60 Valli
+           60 Diana
+          100 Nancy
+          100 Daniel
+          100 John
+          100 Ismael
+          100 Jose Manuel
+          100 Luis
+           30 Den
+           30 Alexander
+           30 Shelli
+           30 Sigal
+           30 Guy
+           30 Karen
+           50 Matthew
+           50 Adam
+           50 Payam
+           50 Shanta
+           50 Kevin
+           50 Julia
+           50 Irene
+           50 James
+           50 Steven
+           50 Laura
+           50 Mozhe
+           50 TJ
+           50 Jason
+           50 Michael
+           50 Ki
+           50 Hazel
+           50 Renske
+           50 Stephen
+           50 John
+           50 Joshua
+           50 Trenna
+           50 Curtis
+           50 Randall
+           50 Peter
+           80 John
+           80 Karen
+           80 Alberto
+
+DEPARTMENT_ID FIRST_NAME
+------------- ------------------------------
+           80 Gerald
+           80 Eleni
+           80 Peter
+           80 David
+           80 Christopher
+           80 Nanette
+           80 Oliver
+           80 Janette
+           80 Patrick
+           80 Allan
+           80 Lindsey
+           80 Louise
+           80 Sarath
+           80 Clara
+           80 Danielle
+           80 Mattea
+           80 Sundar
+           80 Amit
+           80 Lisa
+           80 Harrison
+           80 Tayler
+           80 William
+           80 Elizabeth
+           80 Sundita
+           80 Ellen
+           80 Alyssa
+           80 Jonathon
+           80 Jack
+              Kimberely
+           80 Charles
+           50 Winston
+           50 Jean
+           50 Martha
+           50 Girard
+           50 Nandita
+           50 Alexis
+           50 Anthony
+           50 Kelly
+           50 Jennifer
+           50 Timothy
+           50 Sarah
+           50 Britney
+           50 Samuel
+           50 Vance
+           50 Alana
+           50 Donald
+           50 Douglas
+
+DEPARTMENT_ID FIRST_NAME
+------------- ------------------------------
+           10 Jennifer
+           20 Michael
+           20 Pat
+           40 Susan
+           70 Hermann
+          110 Shelley
+          110 William
+           10 Administration
+           20 Marketing
+           30 Purchasing
+           40 Human Resources
+           50 Shipping
+           60 IT
+           70 Public Relations
+           80 Sales
+           90 Executive
+          100 Finance
+          110 Accounting
+          120 Treasury
+          130 Corporate Tax
+          140 Control And Credit
+          150 Shareholder Services
+          160 Benefits
+          170 Manufacturing
+          180 Construction
+          190 Contracting
+          200 Operations
+          210 IT Support
+          220 NOC
+          230 IT Helpdesk
+          240 Government Sales
+          250 Retail Sales
+          260 Recruiting
+          270 Payroll
+
+128 rows selected.
+
+======Interseccion
+
+DEPARTMENT_ID
+-------------
+           10
+           20
+           30
+           40
+           50
+           60
+           70
+           80
+           90
+          100
+          110
+
+11 rows selected.
+
+======Resta (EXCEPT en postgres)
+
+DEPARTMENT_ID
+-------------
+          120
+          130
+          140
+          150
+          160
+          170
+          180
+          190
+          200
+          210
+          220
+          230
+          240
+          250
+          260
+          270
+
+16 rows selected.
+
+
+COUNT(DEPARTMENT_ID)
+--------------------
+                  27
+
+1 row selected.
+
+
+View created.
+
+
+View created.
+
+
+FIRST_NAME           DEPARTMENT_NAME
+-------------------- ------------------------------
+Shelley              Accounting
+William              Accounting
+Jennifer             Administration
+Lex                  Executive
+Neena                Executive
+Steven               Executive
+Daniel               Finance
+Ismael               Finance
+John                 Finance
+Jose Manuel          Finance
+Luis                 Finance
+Nancy                Finance
+Susan                Human Resources
+Alexander            IT
+Bruce                IT
+David                IT
+Diana                IT
+Valli                IT
+Michael              Marketing
+Pat                  Marketing
+Hermann              Public Relations
+Alexander            Purchasing
+Den                  Purchasing
+Guy                  Purchasing
+Karen                Purchasing
+Shelli               Purchasing
+Sigal                Purchasing
+Alberto              Sales
+Allan                Sales
+Alyssa               Sales
+Amit                 Sales
+Charles              Sales
+Christopher          Sales
+Clara                Sales
+Danielle             Sales
+David                Sales
+David                Sales
+Eleni                Sales
+Elizabeth            Sales
+Ellen                Sales
+Gerald               Sales
+Harrison             Sales
+Jack                 Sales
+Janette              Sales
+John                 Sales
+Jonathon             Sales
+Karen                Sales
+
+FIRST_NAME           DEPARTMENT_NAME
+-------------------- ------------------------------
+Lindsey              Sales
+Lisa                 Sales
+Louise               Sales
+Mattea               Sales
+Nanette              Sales
+Oliver               Sales
+Patrick              Sales
+Peter                Sales
+Peter                Sales
+Sarath               Sales
+Sundar               Sales
+Sundita              Sales
+Tayler               Sales
+William              Sales
+Adam                 Shipping
+Alana                Shipping
+Alexis               Shipping
+Anthony              Shipping
+Britney              Shipping
+Curtis               Shipping
+Donald               Shipping
+Douglas              Shipping
+Girard               Shipping
+Hazel                Shipping
+Irene                Shipping
+James                Shipping
+James                Shipping
+Jason                Shipping
+Jean                 Shipping
+Jennifer             Shipping
+John                 Shipping
+Joshua               Shipping
+Julia                Shipping
+Julia                Shipping
+Kelly                Shipping
+Kevin                Shipping
+Kevin                Shipping
+Ki                   Shipping
+Laura                Shipping
+Martha               Shipping
+Matthew              Shipping
+Michael              Shipping
+Mozhe                Shipping
+Nandita              Shipping
+Payam                Shipping
+Peter                Shipping
+Randall              Shipping
+
+FIRST_NAME           DEPARTMENT_NAME
+-------------------- ------------------------------
+Randall              Shipping
+Renske               Shipping
+Samuel               Shipping
+Sarah                Shipping
+Shanta               Shipping
+Stephen              Shipping
+Steven               Shipping
+TJ                   Shipping
+Timothy              Shipping
+Trenna               Shipping
+Vance                Shipping
+Winston              Shipping
+
+106 rows selected.
+
+
+DEPARTMENT_NAME                  CANTIDAD
+------------------------------ ----------
+Accounting                              2
+Administration                          1
+Executive                               3
+Finance                                 6
+Human Resources                         1
+IT                                      5
+Marketing                               2
+Public Relations                        1
+Purchasing                              6
+Sales                                  34
+Shipping                               45
+
+11 rows selected.
+
+
+DEPARTMENT_NAME                  CANTIDAD   SAL_PROM
+------------------------------ ---------- ----------
+Accounting                              2      10150
+Administration                          1       4400
+Executive                               3 19333.3333
+Finance                                 6       8600
+Human Resources                         1       6500
+IT                                      5       5760
+Marketing                               2       9500
+Public Relations                        1      10000
+Purchasing                              6       4150
+Sales                                  34 8955.88235
+Shipping                               45 3475.55556
+
+11 rows selected.
+
+
+DEPARTMENT_NAME                  CANTIDAD SAL_PROM_TRUNC
+------------------------------ ---------- --------------
+Accounting                              2          10150
+Administration                          1           4400
+Executive                               3       19333.33
+Finance                                 6           8600
+Human Resources                         1           6500
+IT                                      5           5760
+Marketing                               2           9500
+Public Relations                        1          10000
+Purchasing                              6           4150
+Sales                                  34        8955.88
+Shipping                               45        3475.55
+
+11 rows selected.
+
+
+View created.
+
+
+NOMBRE_DEPARTAMENTO              CANTIDAD    SAL_MAX SAL_MAXIMO    SAL_MIN
+------------------------------ ---------- ---------- ---------- ----------
+Accounting                              2      10150      12000       8300
+Administration                          1       4400       4400       4400
+Executive                               3   19333.33      24000      17000
+Finance                                 6       8600      12000       6900
+Human Resources                         1       6500       6500       6500
+IT                                      5       5760       9000       4200
+Marketing                               2       9500      13000       6000
+Public Relations                        1      10000      10000      10000
+Purchasing                              6       4150      11000       2500
+Sales                                  34    8955.88      14000       6100
+Shipping                               45    3475.55       8200       2100
+
+11 rows selected.
+
+
+View created.
+
+
+FIRST_NAME           JOB_TITLE
+-------------------- -----------------------------------
+Daniel               Accountant
+Ismael               Accountant
+John                 Accountant
+Jose Manuel          Accountant
+Luis                 Accountant
+Shelley              Accounting Manager
+Jennifer             Administration Assistant
+Lex                  Administration Vice President
+Neena                Administration Vice President
+Nancy                Finance Manager
+Susan                Human Resources Representative
+Michael              Marketing Manager
+Pat                  Marketing Representative
+Steven               President
+Alexander            Programmer
+Bruce                Programmer
+David                Programmer
+Diana                Programmer
+Valli                Programmer
+William              Public Accountant
+Hermann              Public Relations Representative
+Alexander            Purchasing Clerk
+Guy                  Purchasing Clerk
+Karen                Purchasing Clerk
+Shelli               Purchasing Clerk
+Sigal                Purchasing Clerk
+Den                  Purchasing Manager
+Alberto              Sales Manager
+Eleni                Sales Manager
+Gerald               Sales Manager
+John                 Sales Manager
+Karen                Sales Manager
+Allan                Sales Representative
+Alyssa               Sales Representative
+Amit                 Sales Representative
+Charles              Sales Representative
+Christopher          Sales Representative
+Clara                Sales Representative
+Danielle             Sales Representative
+David                Sales Representative
+David                Sales Representative
+Elizabeth            Sales Representative
+Ellen                Sales Representative
+Harrison             Sales Representative
+Jack                 Sales Representative
+Janette              Sales Representative
+Jonathon             Sales Representative
+
+FIRST_NAME           JOB_TITLE
+-------------------- -----------------------------------
+Kimberely            Sales Representative
+Lindsey              Sales Representative
+Lisa                 Sales Representative
+Louise               Sales Representative
+Mattea               Sales Representative
+Nanette              Sales Representative
+Oliver               Sales Representative
+Patrick              Sales Representative
+Peter                Sales Representative
+Peter                Sales Representative
+Sarath               Sales Representative
+Sundar               Sales Representative
+Sundita              Sales Representative
+Tayler               Sales Representative
+William              Sales Representative
+Alana                Shipping Clerk
+Alexis               Shipping Clerk
+Anthony              Shipping Clerk
+Britney              Shipping Clerk
+Donald               Shipping Clerk
+Douglas              Shipping Clerk
+Girard               Shipping Clerk
+Jean                 Shipping Clerk
+Jennifer             Shipping Clerk
+Julia                Shipping Clerk
+Kelly                Shipping Clerk
+Kevin                Shipping Clerk
+Martha               Shipping Clerk
+Nandita              Shipping Clerk
+Randall              Shipping Clerk
+Samuel               Shipping Clerk
+Sarah                Shipping Clerk
+Timothy              Shipping Clerk
+Vance                Shipping Clerk
+Winston              Shipping Clerk
+Curtis               Stock Clerk
+Hazel                Stock Clerk
+Irene                Stock Clerk
+James                Stock Clerk
+James                Stock Clerk
+Jason                Stock Clerk
+John                 Stock Clerk
+Joshua               Stock Clerk
+Julia                Stock Clerk
+Ki                   Stock Clerk
+Laura                Stock Clerk
+Michael              Stock Clerk
+
+FIRST_NAME           JOB_TITLE
+-------------------- -----------------------------------
+Mozhe                Stock Clerk
+Peter                Stock Clerk
+Randall              Stock Clerk
+Renske               Stock Clerk
+Stephen              Stock Clerk
+Steven               Stock Clerk
+TJ                   Stock Clerk
+Trenna               Stock Clerk
+Adam                 Stock Manager
+Kevin                Stock Manager
+Matthew              Stock Manager
+Payam                Stock Manager
+Shanta               Stock Manager
+
+107 rows selected.
+
+
+View created.
+
+
+JOB_TITLE                             CANTIDAD
+----------------------------------- ----------
+Accountant                                   5
+Accounting Manager                           1
+Administration Assistant                     1
+Administration Vice President                2
+Finance Manager                              1
+Human Resources Representative               1
+Marketing Manager                            1
+Marketing Representative                     1
+President                                    1
+Programmer                                   5
+Public Accountant                            1
+Public Relations Representative              1
+Purchasing Clerk                             5
+Purchasing Manager                           1
+Sales Manager                                5
+Sales Representative                        30
+Shipping Clerk                              20
+Stock Clerk                                 20
+Stock Manager                                5
+
+19 rows selected.
+
+
+View created.
+
+
+EMPLEADO             JEFE
+-------------------- --------------------
+Alexis               Adam
+Anthony              Adam
+James                Adam
+Julia                Adam
+Laura                Adam
+Mozhe                Adam
+Nandita              Adam
+TJ                   Adam
+Amit                 Alberto
+Clara                Alberto
+Danielle             Alberto
+David                Alberto
+Mattea               Alberto
+Sundar               Alberto
+Bruce                Alexander
+David                Alexander
+Diana                Alexander
+Valli                Alexander
+Alexander            Den
+Guy                  Den
+Karen                Den
+Shelli               Den
+Sigal                Den
+Alyssa               Eleni
+Charles              Eleni
+Ellen                Eleni
+Jack                 Eleni
+Jonathon             Eleni
+Kimberely            Eleni
+Elizabeth            Gerald
+Harrison             Gerald
+Lisa                 Gerald
+Sundita              Gerald
+Tayler               Gerald
+William              Gerald
+Christopher          John
+David                John
+Nanette              John
+Oliver               John
+Peter                John
+Peter                John
+Allan                Karen
+Janette              Karen
+Lindsey              Karen
+Louise               Karen
+Patrick              Karen
+Sarath               Karen
+
+EMPLEADO             JEFE
+-------------------- --------------------
+Alana                Kevin
+Curtis               Kevin
+Donald               Kevin
+Douglas              Kevin
+Kevin                Kevin
+Peter                Kevin
+Randall              Kevin
+Trenna               Kevin
+Alexander            Lex
+Girard               Matthew
+Irene                Matthew
+James                Matthew
+Jean                 Matthew
+Julia                Matthew
+Martha               Matthew
+Steven               Matthew
+Winston              Matthew
+Pat                  Michael
+Daniel               Nancy
+Ismael               Nancy
+John                 Nancy
+Jose Manuel          Nancy
+Luis                 Nancy
+Hermann              Neena
+Jennifer             Neena
+Nancy                Neena
+Shelley              Neena
+Susan                Neena
+Hazel                Payam
+Jason                Payam
+Jennifer             Payam
+Kelly                Payam
+Ki                   Payam
+Michael              Payam
+Randall              Payam
+Timothy              Payam
+Britney              Shanta
+John                 Shanta
+Joshua               Shanta
+Renske               Shanta
+Samuel               Shanta
+Sarah                Shanta
+Stephen              Shanta
+Vance                Shanta
+William              Shelley
+Adam                 Steven
+Alberto              Steven
+
+EMPLEADO             JEFE
+-------------------- --------------------
+Den                  Steven
+Eleni                Steven
+Gerald               Steven
+John                 Steven
+Karen                Steven
+Kevin                Steven
+Lex                  Steven
+Matthew              Steven
+Michael              Steven
+Neena                Steven
+Payam                Steven
+Shanta               Steven
+
+106 rows selected.
+
+from rep_emp_jefe
+*
+ERROR at line 3:
+ORA-00936: missing expression
+Help: https://docs.oracle.com/error-help/db/ora-00936/
+
+
+select * from rep_ejec_emp_jefe
+              *
+ERROR at line 1:
+ORA-00942: table or view "BASES1"."REP_EJEC_EMP_JEFE" does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+
+
+====fin===========

@@ -1,0 +1,61 @@
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+====inicio===========
+creamos la tabla indicando tablespace ****NUEVO
+
+Table created.
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER
+ NOMBRE                                             VARCHAR2(10)
+ SALARIO                                   NOT NULL NUMBER
+
+Creamos la PK (Primary Key) Lo correcto (cuando creamos script inicial)
+
+Table altered.
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER
+ NOMBRE                                             VARCHAR2(10)
+ SALARIO                                   NOT NULL NUMBER
+
+Creamos una secuencia
+
+Sequence created.
+
+insertamos registros (con secuencia)
+
+1 row created.
+
+
+1 row created.
+
+insert into empleados(id, nombre, salario) values (sec_empleados.nextval,'Lucia',null)
+                                                                                 *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("BASES1"."EMPLEADOS"."SALARIO") 
+Help: https://docs.oracle.com/error-help/db/ora-01400/ 
+
+
+
+Commit complete.
+
+Consultar Tabla
+
+        ID NOMBRE        SALARIO                                                
+---------- ---------- ----------                                                
+         1 Ana              1500                                                
+         2 Juan             1400                                                
+
+2 rows selected.
+
+====fin===========

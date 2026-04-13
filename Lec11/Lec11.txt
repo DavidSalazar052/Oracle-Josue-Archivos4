@@ -1,0 +1,21 @@
+========================================================
+Lección No 11
+
+24-mar-2026
+=========== 
+
+========================================================
+Lec 10 fue la práctica No 1
+Seguimos con Lec 11
+========================================================
++ Solución a práctica No 1
++ 1pm y 3pm Todos asistieron a la práctica NO (luego de semana santa se entrega la misma junto con Quiz No 1)
++ Vamos a usar: Lec09-hr.sql
+  + Teoria_conjuntos_ejemplos_hr.pdf
+  + Lec11a.sql
++ Tarea Moral, poner a funcionar "Dbeaver" en sus computadoras.
+
+========================================================
+========================================================
+========================================================
+========================================================

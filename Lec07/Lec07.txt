@@ -1,0 +1,81 @@
+========================================================
+
+Lección No 07
+
+10-mar-2026
+===========
+
+========================================================
+Tarea 01.
+
+"Ya subida la calificación de ambos grupos"..
+========================================================
+Errores de la Tarea 01:
+
+Deben aprender a prestar atención a los detalles, seguir instruciones, encontré estos errores:
+
++ Formato de Apellido1_Nombre.sql
++ No hacer Video
++ Archivo aparte para link (no rebajé muchos puntos) , era como comentario o PROMPT en el mismo .sql
++ NO COMPARTIERON PUBLICO Con Google Drive. O bien algunos con Sharepoint o OneDrive (Explicitamente se indicó Google Drive!! y Compartir público!)
++ Create, alter, drop (no requieren commit;) no rebajé puntos, solo es aclaración!
++ NO COLOCAR COSAS QUE NO HAYAMOS VISTO EN CLASES!!! por favor!! cada tarea pueden usar solo lo visto en clases 
+  (puede ser todo lo anterior es acumulativo)!
+  si usan eso me deja pensando si usaron IA para resolver?????
++ Hablo en general de ambos grupos. Pero a cada estudiante le puse la indicación en caso de rebajo de puntos...
+========================================================
+
++ Temas de Libro
+En la carta al estudiante al final dice:
+
+Toda esta bibliografía está disponible en el siguiente enlace:
+https://drive.google.com/drive/folders/19k9M3W-jClYcxUk1vEj0co6d82bfI0Of?usp=sharing
+
+El libro mas completo de toda la base teórica de concepto de BD Relacionales es este:
+fundamentos-de-bases-de-datos-silberschatz-korth-sudarshan.pdf // son casi 800 páginas!! no podemos ver todo en 17 semanas!!!
+
+
+1.3.1. Abstracción de datos
+
+Nivel de vistas: El nivel más alto de abstracción describe sólo parte de la base de datos completa
+
+
+1.4.1. Modelo entidad-relación
+
+
+1.5.1. Lenguaje de definición de datos
+
+1.5.2. Lenguaje de manipulación de datos
+
+etc...
+========================================================
+
++ Inner Join
+EXPLICITO:
+===========
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+--multiples tablas:
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID;
+
+
+
+IMPLITICO (mas sencillo)
+
+SELECT column_name(s)
+FROM   table1, table2
+WHERE  table1.column_name = table2.column_name;
+
+--multiples tablas
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM   Orders, Customers, Shippers
+WHERE  Orders.CustomerID = Customers.CustomerID
+AND    Orders.ShipperID   = Shippers.ShipperID;
+
+========================================================

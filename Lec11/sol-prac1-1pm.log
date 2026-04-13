@@ -1,0 +1,70 @@
+=======================================
+SOLUCION PRACT 01 / 1pm
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+====Conectar con bases1===========
+INICIO ESTO ES LO QUE DEBEN DESARROLLAR EN PAPEL
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+       ID FECHA      ID_PADRE USUARIO    COMENTARIO
+--------- --------- --------- ---------- ------------------------------
+        1 21-MAR-26           juan       Que opinan de la IA
+        2 21-MAR-26         1 pedro      es buena
+        3 21-MAR-26         2 ana        no creo que sea tan buena
+        4 21-MAR-26         1 sonia      no opino
+        5 21-MAR-26         3 rosa       no buena ni mala
+        6 21-MAR-26           juan       comente sobre El Quijote
+
+6 rows selected.
+
+
+View created.
+
+
+COM_PADRE                      COM_HIJO                         ID_HIJO
+------------------------------ ------------------------------ ---------
+no creo que sea tan buena      no buena ni mala                       5
+Que opinan de la IA            no opino                               4
+es buena                       no creo que sea tan buena              3
+Que opinan de la IA            es buena                               2
+
+4 rows selected.
+
+FIN ESTO ES LO QUE DEBEN DESARROLLAR EN PAPEL
+====fin===========
