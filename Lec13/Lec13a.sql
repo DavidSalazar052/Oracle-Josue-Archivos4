@@ -106,6 +106,8 @@ show error
 
 prompt ===================================================
 prompt Crear función fun_peso_masc_tipo para sumar peso por tipo de mascota
+
+
 create or replace function fun_peso_masc_tipo(Ptipo in varchar2) return number is
   VPesoTotal number;
 begin

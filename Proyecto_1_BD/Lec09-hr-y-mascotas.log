@@ -1,0 +1,1100 @@
+=======================================
+TABLAS DE SISTEMA HR Y TABLA MASCOTAS
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+====Conectar con bases1===========
+====================================================================
+Create the REGIONS table to hold region information for locations
+LOCATIONS table has a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+====================================================================
+Create the COUNTRIES table to hold country information for customers
+and company locations.
+OE.CUSTOMERS table and  LOCATIONS have a foreign key to this table.
+
+Table created.
+
+
+Table altered.
+
+====================================================================
+Create the LOCATIONS table to hold address information for company departments.
+DEPARTMENTS has a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+Useful for any subsequent addition of rows to locations table
+Starts with 3300
+
+Sequence created.
+
+====================================================================
+Create the DEPARTMENTS table to hold company department information.
+EMPLOYEES and  JOB_HISTORY have a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+Useful for any subsequent addition of rows to departments table
+Starts with 280
+
+Sequence created.
+
+====================================================================
+Create the JOBS table to hold the different names of job roles within the company.
+EMPLOYEES has a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+====================================================================
+Create the EMPLOYEES table to hold the employee personnel
+information for the company.
+EMPLOYEES has a self referencing foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table altered.
+
+Useful for any subsequent addition of rows to employees table
+Starts with 207
+
+Sequence created.
+
+====================================================================
+Create the JOB_HISTORY table to hold the history of jobs that
+employees have held in the past.
+JOBS, HR_DEPARTMENTS, and  EMPLOYEES have a foreign key to this table.
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+====================================================================
+Create the EMP_DETAILS_VIEW that joins the employees, jobs,
+departments, jobs, countries, and locations table to provide details
+about employees.
+
+View created.
+
+
+Commit complete.
+
+
+Session altered.
+
+===========================insert data into the REGIONS table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the COUNTRIES table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the LOCATIONS table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================*insert data into the DEPARTMENTS table
+disable integrity constraint to EMPLOYEES to load data
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the JOBS table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+===========================insert data into the EMPLOYEES table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+========= insert data into the JOB_HISTORY table
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+enable integrity constraint to DEPARTMENTS
+
+Table altered.
+
+
+Commit complete.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Commit complete.
+
+procedure and statement trigger to allow dmls during business hours:
+
+Procedure created.
+
+
+Trigger created.
+
+
+Trigger altered.
+
+==========================================================================
+procedure to add a row to the JOB_HISTORY table and row trigger
+to call the procedure when data is updated in the job_id or
+department_id columns in the EMPLOYEES table:
+
+Procedure created.
+
+
+Trigger created.
+
+
+Commit complete.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+=============================================
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Commit complete.
+
+===================================================
+===****MASCOTAS*****
+Crear tabla mascotas
+Cardinalidad:
+Una mascota DEBE tener un propietario que es un empleado
+Un empleado PUEDE (no tener, tener una, o tener N mascotas)
+
+Table created.
+
+===================================================
+Crear una secuencia
+
+Sequence created.
+
+===================================================
+Creamos la PK con el campo id.
+
+Table altered.
+
+===================================================
+Creamos la FK con empleados (employees)
+
+Table altered.
+
+===================================================
+Creamos procedimiento prc_ins_mascotas v3
+
+Procedure created.
+
+No errors.
+===================================================
+Consumimos el procedimiento v1
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+        ID NOMBRE           PESO TIPO        ID_EMP
+---------- ---------- ---------- ------- ----------
+      1000 Puppy               3 perro          102
+      1001 Misingo             4 gato           102
+      1002 Rambo               4 conejo         103
+      1003 Rambo 1             5 conejo         103
+      1004 Rambo 2             6 conejo         103
+
+5 rows selected.
+
+===================================================
+Funcion  fun_cant_masc_emp
+
+Function created.
+
+No errors.
+
+      DATO
+----------
+         2
+
+1 row selected.
+
+===================================================
+vista  rep_empleado_mascotas
+
+View created.
+
+===================================================
+select rep_empleado_mascotas v2
+
+        ID NOM_COMPLETO          CANT_MASC
+---------- -------------------- ----------
+       100 Steven King                   0
+       101 Neena Kochhar                 0
+       102 Lex De Haan                   2
+       103 Alexander Hunold              3
+       104 Bruce Ernst                   0
+
+5 rows selected.
+
+===================================================
+vista rep_emp_mascota
+
+View created.
+
+
+NOM_COMPLETO         NOM_MASCOT PESO_MASCOTA
+-------------------- ---------- ------------
+Alexander Hunold     Rambo                 4
+Alexander Hunold     Rambo 1               5
+Alexander Hunold     Rambo 2               6
+Lex De Haan          Misingo               4
+Lex De Haan          Puppy                 3
+
+5 rows selected.
+
+
+Function created.
+
+No errors.
+
+      DATO
+----------
+         5
+
+1 row selected.
+
+====fin===========

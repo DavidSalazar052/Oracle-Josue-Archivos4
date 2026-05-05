@@ -23,7 +23,6 @@ conn bases1/bases123@FREEPDB1
 @Lec09-hr.sql
 
 
-
 --hr3.sql
 --agregar una tabla mas.. ejericio de la práctica no 2.
 --3pm... 5pm..
@@ -98,7 +97,6 @@ select * from mascotas;
 
 
 
-
 prompt ===================================================
 prompt Funcion  fun_cant_masc_emp 
 --recibe por parametro el id de empleado y retorna la cantidad 
@@ -164,6 +162,170 @@ end fun_cant_mascotas;
 show error
 
 select fun_cant_mascotas dato from dual;
+
+-- FUNCIONES ADICIONALES CON COMENTARIOS
+-- Estas funciones usan COUNT, SUM, AVG, MAX y MIN para generar resultados útiles.
+-- Se agregan ejemplos de uso para cada función.
+
+prompt ===================================================
+prompt Funcion fun_total_mascotas
+-- Retorna la cantidad total de mascotas registradas.
+create or replace function fun_total_mascotas return number is
+  VCantidad number;
+begin  
+  into   VCantidad
+  from   mascotas;
+  return VCantidad;
+end fun_total_mascotas;
+/
+show error
+select fun_total_mascotas dato from dual;
+
+prompt ===================================================
+prompt Funcion fun_cant_mascotas_por_tipo
+-- Recibe el tipo de mascota y retorna cuántas mascotas de ese tipo existen.
+create or replace function fun_cant_mascotas_por_tipo(Ptipo in varchar2) return number is
+  VCantidad number;
+begin
+  select count(*)
+  into   VCantidad
+  from   mascotas
+  where  tipo = Ptipo;
+  return VCantidad;
+end fun_cant_mascotas_por_tipo;
+/
+show error
+select fun_cant_mascotas_por_tipo('gato') dato from dual;
+
+prompt ===================================================
+prompt Funcion fun_peso_total_emp
+-- Recibe el id de empleado y retorna la suma del peso de todas sus mascotas.
+create or replace function fun_peso_total_emp(Pid_emp in number) return number is
+  VPesoTotal number;
+begin
+  select sum(peso)
+  into   VPesoTotal
+  from   mascotas
+  where  id_emp = Pid_emp;
+  return nvl(VPesoTotal,0);
+end fun_peso_total_emp;
+/
+show error
+select fun_peso_total_emp(102) peso_total from dual;
+
+prompt ===================================================
+prompt Funcion fun_peso_total_mascotas
+-- Retorna el peso total de todas las mascotas registradas.
+create or replace function fun_peso_total_mascotas return number is
+  VPesoTotal number;
+begin
+  select sum(peso)
+  into   VPesoTotal
+  from   mascotas;
+  return nvl(VPesoTotal,0);
+end fun_peso_total_mascotas;
+/
+show error
+select fun_peso_total_mascotas peso_total from dual;
+
+prompt ===================================================
+prompt Funcion fun_peso_prom_emp
+-- Recibe el id de empleado y retorna el peso promedio de sus mascotas.
+create or replace function fun_peso_prom_emp(Pid_emp in number) return number is
+  VPromedio number;
+begin
+  select avg(peso)
+  into   VPromedio
+  from   mascotas
+  where  id_emp = Pid_emp;
+  return nvl(VPromedio,0);
+end fun_peso_prom_emp;
+/
+show error
+select fun_peso_prom_emp(102) peso_promedio from dual;
+
+prompt ===================================================
+prompt Funcion fun_peso_prom_general
+-- Retorna el peso promedio de todas las mascotas.
+create or replace function fun_peso_prom_general return number is
+  VPromedio number;
+begin
+  select avg(peso)
+  into   VPromedio
+  from   mascotas;
+  return nvl(VPromedio,0);
+end fun_peso_prom_general;
+/
+show error
+select fun_peso_prom_general peso_promedio from dual;
+
+prompt ===================================================
+prompt Funcion fun_mascota_mas_pesada_emp
+-- Recibe el id de empleado y retorna el peso máximo de sus mascotas.
+create or replace function fun_mascota_mas_pesada_emp(Pid_emp in number) return number is
+  VPesoMax number;
+begin
+  select max(peso)
+  into   VPesoMax
+  from   mascotas
+  where  id_emp = Pid_emp;
+  return nvl(VPesoMax,0);
+end fun_mascota_mas_pesada_emp;
+/
+show error
+select fun_mascota_mas_pesada_emp(102) peso_max from dual;
+
+prompt ===================================================
+prompt Funcion fun_mascota_mas_ligera_emp
+-- Recibe el id de empleado y retorna el peso mínimo de sus mascotas.
+create or replace function fun_mascota_mas_ligera_emp(Pid_emp in number) return number is
+  VPesoMin number;
+begin
+  select min(peso)
+  into   VPesoMin
+  from   mascotas
+  where  id_emp = Pid_emp;
+  return nvl(VPesoMin,0);
+end fun_mascota_mas_ligera_emp;
+/
+show error
+select fun_mascota_mas_ligera_emp(102) peso_min from dual;
+
+prompt ===================================================
+prompt Funcion fun_emp_mas_mascotas
+-- Retorna el id del empleado que tiene la mayor cantidad de mascotas.
+create or replace function fun_emp_mas_mascotas return number is
+  VEjeMax number;
+begin
+  select id_emp
+  into   VEjeMax
+  from   (
+    select id_emp, count(*) as cnt
+    from mascotas
+    group by id_emp
+    order by cnt desc
+  )
+  where rownum = 1;
+  return VEjeMax;
+end fun_emp_mas_mascotas;
+/
+show error
+select fun_emp_mas_mascotas empleado_con_mas_mascotas from dual;
+
+prompt ===================================================
+prompt Funcion fun_rango_peso_mascotas
+-- Retorna la diferencia entre la mascota más pesada y la más ligera.
+create or replace function fun_rango_peso_mascotas return number is
+  VRango number;
+begin
+  select max(peso) - min(peso)
+  into   VRango
+  from   mascotas;
+  return nvl(VRango,0);
+end fun_rango_peso_mascotas;
+/
+show error
+select fun_rango_peso_mascotas rango_peso from dual;
 
 --
 -- create table mascotas

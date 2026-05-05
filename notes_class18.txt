@@ -1,0 +1,29 @@
+EXCEPTIONS = son errores controlados dentro del codigo.
+
+    Buscar un dato que no existe → no_data_found
+    Traer más de un registro → too_many_rows
+    Dividir entre 0 → zero_divide
+
+SU ESTRUCTURA BASICA:
+
+begin
+   -- código normal
+exception
+   when error1 then
+      -- qué hacer
+   when error2 then
+      -- qué hacer
+   when others then
+      -- cualquier otro error
+end;
+
+EJEMPLO: 
+
+select salary
+into VSalario
+from employees
+where employee_id = Pid;
+
+when no_data_found then
+  dbms_output.put_line('Error: No Existe El Empleado');
+  return -2;

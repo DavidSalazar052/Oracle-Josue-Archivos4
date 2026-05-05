@@ -1,0 +1,161 @@
+========================================================
+Lección No 15
+
+14-abr-2026
+=========== 
+
+========================================================
+1) Explicación ampliada de proyecto
+2) Mas ejemplos de funciones y procedimientos. con Cursores.
+========================================================
+
+1 archivo 1MB .zip
+Para entrega 
+
+lunes 27 de abril, 10pm aula virtual 
+
+(solo subir Proyecto_1_Nombre_Apellido.sql en zip Proyecto_1_Nombre_Apellido.zip) Sin tildes ni eñes ambos archivos (-3ptos si incumple este formato)
+================================================================================================================
+Se explica que el proyecto es muy abierto, todos tienen 100% si cumplen con lo "minimo solicitado"
+pero el objetivo es que practiquen, y pueden ser creativos creando sus propias reglas de negocio.
+
+================================================================================================================
+TEMAS DE LA PRACTICA No 2.
+==========================
+
+.............................................................................
+0. POR HERENCIA
+Todo lo visto anteriormente !!!
+.............................................................................
+1. ESTRUCTURA BÁSICA PL/SQL / FUNCIONES / PROCEDIMIENTOS
+CREATE OR REPLACE
+PROCEDURE
+FUNCTION
+RETURN
+IS / AS
+BEGIN
+END
+;
+/ (para ejecutar en SQL*Plus)
+.............................................................................
+2. VARIABLES Y TIPOS
+NUMBER
+VARCHAR2
+DATE
+%TYPE -- lo vimos, pero no entra, no lo voy a pedir
+.............................................................................
+3. CONTROL DE FLUJO (SOLO ESTE VEREMOS) // IF sencillo o bien IF aninado
+IF
+ELSIF
+ELSE
+END IF
+.............................................................................
+4. CURSORES 
+CURSOR
+FOR c IN Cur_Algo LOOP
+ ...
+ ..
+ .
+END LOOP
+.............................................................................
+5. DML (MANIPULACIÓN DE DATOS)
+SELECT
+INSERT INTO
+UPDATE
+DELETE
+VALUES
+SET
+WHERE
+COMMIT
+.............................................................................
+6. FUNCIONES ESTANDAR / AGREGACION
+UPPER
+LOWER
+COUNT
+SUM
+AVG
+MAX
+MIN
+.............................................................................
+7. USO DE FUNCIONES Y PROCEDIMIENTOS
+EXEC procedimiento(param1);
+EXECUTE procedimiento(param1);
+
+--dentro de PROCEDIMIENTOS
+Vresult := fun_algo(valor);
+prc_algo(param1, param2);
+.............................................................................
+8. OPERADORES
+=
+<>
+<
+>
+<=
+>=
+AND
+OR
+NOT
+.............................................................................
+9. CONCATENACIÓN
+||
+
+Ejemplo:
+
+'Empleado: ' || rec.first_name
+.............................................................................
+10. ORDER BY 
+ORDER BY
+ASC
+DESC
+.............................................................................
+11. TEORIA DE CONJUNTOS
+UNION
+INTERSECT
+MINUS
+.............................................................................
+
+
+***********OJO **********************
+Nota: Para la práctica No 2 (28 de abril), permitiré una hoja completa tamaño carta, por ambas caras. (Con el nombre del estudiante)
+A LAPIZ O LAPICERO, y vale como Una Tarea + Un quiz (solo el hecho de llevarla a lapiz o lapicero)
+Si no la llevan a Lapiz o Lapicero, tienen CERO en ese QUIZ y TAREA!! Así que no pierdan esos puntos!!!
+Recomendación: Hacerla ordenada, de forma clara, individual, luego de haber completado el Proyecto No 1 de forma honesta.
+
+================================================================================================================
+================================================================================================================
+================================================================================================================
+================================================================================================================
+================================================================================================================
+Proyecto No 1
+==============
+
+Instrucciones Adicionales:
+
+El objetivo del proyecto es que el Estudiante Practique y se prepare con la sintaxis de los procedimientos y funciones, y el código visto en clases.
+
+Se piden como mínimo 3 funciones básicas + 3 avanzadas, y 3 procedimiento básicos y 3 avanzados.
+Pero esto es lo mínimo, si hacen mas, y con mas combinaciones, mayor es la práctica y comprensión de la materia,
+
+Así que no hay un limite máximo.
+
+Todo es basado en el script Lec09-hr-y-mascotas.sql que hemos venido trabajando, que son las 7 tablas de HR + tabla mascotas (como ejemplo)
+
+
+También el estudiante DEBE incorporar al menos una tabla adicional, y una o varias: secuencias, PKs, FKs, CKs.
+Esta tabla debe estar relacionada con la tabla EMPLOYEES (Empleados) No puede usar la tabla mascotas ya creada.
+Puede ser una tabla inventada de cualquier tema (estricto individual), o pueden ser mas tablas, 2 o 3, todo depende de lo que quieran practicar.
+
+Así que en el video para probar su proyecto primero corre Lec09-hr-y-mascotas.sql una vez, y luego corre "n" veces
+Su script de Proyecto_1.sql
+
+Para el video pueden explicar al menos una básica y avanzada de cada uno (proc y fun) sobre todo el código y las funcionalidades implementadas.
+
+Finalmente se recomienda que cada estudiante de forma individual haga su material de apoyo o "forro" para la práctica No 2 en papel que será el martes 28 de abril (en horario de lección), la materia es acumulativa, así que aunque no se evalúa PK, FK, CK, el conocimiento de estos conceptos Sí se va a evaluar al usar tablas.
+
+Finalmente deben hacerlo de forma honesta y transparente usando sus propios conocimientos, no deben usar IAs de ningún tipo para crear la totalidad del proyecto, pueden usarla puntualmente para revisar un error específico. Esto no elimina mi responsabilidad como profesor de atender cualquier consulta. Yo atiendo consultas hasta el viernes 24 de abril 8pm. Esto porque el proyecto se ha dado con suficiente tiempo.
+
+================================================================================================================
+================================================================================================================
+================================================================================================================
+
+

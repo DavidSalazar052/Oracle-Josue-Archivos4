@@ -16,6 +16,8 @@ SET PAGESIZE 50
 SET LINESIZE 150
 SET TRIMSPOOL ON
 
+--SPOOL &1..log
+
 --NUEVA
 --Para los Mensajes en pantalla usando : DBMS_OUTPUT. usamos ejec2.bat
 SET SERVEROUTPUT ON SIZE UNLIMITED
