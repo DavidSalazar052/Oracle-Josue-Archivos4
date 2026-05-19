@@ -3,7 +3,6 @@ SET PAGESIZE 50
 SET LINESIZE 150
 SET TRIMSPOOL ON
 
-SPOOL &1..log
 PROMPT =======================================
 PROMPT TABLAS DE SISTEMA HR Y TABLA MASCOTAS
 
@@ -2602,6 +2601,7 @@ end prc_ins_mascotas;
 show error
 prompt ===================================================
 prompt Consumimos el procedimiento v1
+execute prc_ins_mascotas('Doggy',2,'perro',101);
 execute prc_ins_mascotas('Puppy',3,'perro',102);
 execute prc_ins_mascotas('Misingo',4,'gato',102);
 execute prc_ins_mascotas('Rambo',4,'conejo',103);
@@ -2677,6 +2677,4 @@ select fun_cant_mascotas dato from dual;
 
 
 PROMPT ====fin===========
-
-SPOOL OFF
 EXIT

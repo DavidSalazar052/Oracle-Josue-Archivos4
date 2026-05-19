@@ -1,0 +1,36 @@
+DUP_VAL_ON_INDEX - Nueva
+Esta puede ser una llave PK o una FK
+
+-- tarea 3 y 4 
+-- volver a repasar operadores y basicos
+-- no vamos a ver el intersect ni el minus, si el union 
+
+Que si entra: 
+1. EL USO DEL BETWEEN 
+
+0 registros -> NO_DATA_FOUND
+1 registro  -> OK
+"n" registros -> too_many_rows
+
+For x in c_mascotas loop
+..
+..
+..
+exit; -- solo sale del for y sigue abajo
+end loop;
+Vresult := Vresult + 1000;
+return Vresult
+
+
+siempre programemos en logica, pero tambien coloquemos las exepciones 
+
+el rolback es lo contrario que el commit;
+
+cuando hacemos un insert un delete, un update no quedan aplicados en la bd
+otros usuarios no vven este dato hasta que se aplique el commit
+si hay errorere o quiero reversar ese 
+insert, delete l update 
+utilizamos rollback; si hago insert el uso de secuencies se perdieron
+
+SABER QUIEN HIZO QUIEN 
+auditorias con triggers 

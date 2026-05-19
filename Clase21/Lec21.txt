@@ -1,0 +1,43 @@
+========================================================
+Lección No 21 
+
+05-may-2026
+=========== 
+
+========================================================
+Agenda
+======
+
+Asueto viernes 8 de mayo 2026!! NO hay clases!!
+
+1) Tema entrega Tarea 3 y 4
+
+2) Quiz 12 de mayo + 15 de mayo (al finalizar la clase) en papel "recorre funcion" básica
+
+3) Continuar : Manejo de Excepciones. + dup_val_on_index
+
+
+   Agregar tema:  uso de between
+   EJ:  select * from empleados where salario between 5000 and 10000;
+   
+--recordar
+eject3.bat para respetar tildes y eñes
+
+========================================================
+========================================================
+CRONOGRAMA DE FINAL DE CICLO
+==============================
+
+
+
+05 + -- Mayo --Asignación de Tarea 3+4 (entrega lunes 11 mayo)
+12 + 15 Mayo --Quices en papel 
+19 + 22 Mayo--asignación de proyectos
+26 + 29 Mayo
+02 + 05 Junio
+09 + 12 Junio --Entrga de Proyecto
+16 + 18 Junio -- Práctica Final para los NO EXIMIDOS!! el Martes 16 de junio!! en horario de clases!! 2horas
+
+========================================================
+========================================================
+========================================================
