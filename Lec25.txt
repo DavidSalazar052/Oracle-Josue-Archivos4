@@ -1,0 +1,122 @@
+========================================================
+Lección No 25 
+
+19-may-2026
+=========== 
+
+========================================================
+Agenda
+======
+
+1) Tema nuevo TRIGGERS
+
+========================================================
+========================================================
+CRONOGRAMA DE FINAL DE CICLO
+==============================
+
+19 + 22 Mayo  -- asignación de proyectos
+26 + 29 Mayo  
+02 + 05 Junio 
+09 + 12 Junio -- Entrga de Proyecto
+16 + 18 Junio -- Práctica Final para los NO EXIMIDOS!! el Martes 16 de junio!! en horario de clases!! 2horas
+
+========================================================
+========================================================
+========================================================
+
+TRIGGERS
+No puede hacer select sobre la misma tabla
+
+========================================================
+CREATE OR REPLACE TRIGGER trg_empleado
+AFTER INSERT ON empleados
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Empleado insertado');
+END;
+/
+
+========================================================
+CREATE OR REPLACE TRIGGER trg_validar_salario
+BEFORE INSERT OR UPDATE ON empleados
+FOR EACH ROW
+BEGIN
+
+    IF :NEW.salario < 0 THEN
+        RAISE_APPLICATION_ERROR(
+            -20001,
+            'El salario no puede ser negativo'
+        );
+    END IF;
+
+END;
+/
+
+
+IMPORTANTE
+BEFORE INSERT
+AFTER UPDATE
+BEFORE DELETE
+
+
+ESTO SE REALIZA EN BITACORAS PARA SABER QUIEN MODIFICO, QUIEN ACTUALIZO, QUIEN BORRO
+esto deberia de ser una buena practica para al realización del proyecto de ingenieria. 
+
+
+un ejemplo de implementación de trigger 
+
+    personas_trg_bur es lo mas resumido para:
+    Personas_trigger_before
+
+
+Usar funciones dentro del trigger ========================
+
+create or replace function fun_invierte_may_min
+(p_texto in varchar2) return varchar2 is
+begin
+    if p_texto = upper(p_texto) then
+        return lower(p_texto);
+    elsif p_texto = lower(p_texto) then
+        return upper(p_texto);
+    else
+        return p_texto;
+    end if;
+end;
+/
+
+
+En Oracle Database, ROLLBACK es un comando que sirve para deshacer 
+cambios realizados en la base de datos que todavía no han sido confirmados.
+
+Revierte operaciones como:
+
+INSERT
+UPDATE
+DELETE
+
+siempre que aún no hayas ejecutado:
+
+EJEMPLO ===================================
+BEGIN
+
+    UPDATE cuentas
+    SET saldo = saldo - 100
+    WHERE id = 1;
+
+    UPDATE cuentas
+    SET saldo = saldo + 100
+    WHERE id = 2;
+
+    COMMIT;
+
+EXCEPTION
+
+    WHEN OTHERS THEN
+        ROLLBACK;
+
+END;
+/
+
+COMMIT	    Guarda cambios
+ROLLBACK	Deshace cambios
+SAVEPOINT	Punto de retorno

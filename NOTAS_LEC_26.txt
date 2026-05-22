@@ -1,0 +1,30 @@
+
+
+
+        ID NOMBRE               G    SALARIO   ID_PADRE   ID_MADRE
+---------- -------------------- - ---------- ---------- ----------
+         1 Juan                 M       1000
+         2 Ana                  F       1000
+         3 Sonia                F       1000          1          2
+         4 Hugo                 M       1000          1          2
+         5 Pedro                M       1000
+         6 June                 F       1000          4          3
+         7 Mars                 F       1000          4          3
+         8 Venus                F       1000          4          3
+         9 Aries                F       1000          4          3
+
+
+TABLA BITACORA
+
+--TABLA BITACORA tabla personas_log
+PROMPT ==== Tabla personas_log
+create table personas_log (
+fecha_log   date,
+accion_log  varchar2(1),
+usuario_log varchar2(30),
+id          number,
+nombre      varchar2(20),
+genero      varchar2(1),
+salario     number default 1000,
+id_padre    number,
+id_madre    number);
